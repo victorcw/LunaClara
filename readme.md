@@ -12,6 +12,10 @@ Está compuesta por :
 	_ Reseñas y opiniones de los cliente - Ordenado con Grid
 	_ Imagen de fondo y responsivo
 
+Repositorio: https://github.com/victorcw/LunaClara
+Web: https://victorcw.github.io/LunaClara/index.html
+
+
 Víctor Cwik
 
 
