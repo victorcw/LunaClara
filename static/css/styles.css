@@ -1,0 +1,357 @@
+/* Estilos generales */
+body {
+    font-family: "Comic Neue", cursive;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-size: auto;
+    background-image: url(/static/img/Fondo1.png);
+    color: #555555;
+    background-repeat: repeat;
+}
+
+header {
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color:#d0e7ee;
+    color: black;
+    padding: 20px;
+}
+
+#logo {
+    max-width: 10%;
+    margin-right: 0;
+      }
+
+title {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+nav ul {
+    list-style-type: none;
+    vertical-align: bottom;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    vertical-align: bottom;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: #a4adfa;
+    color: #080404;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 768px) {
+    /* Estilos para tablet */
+}
+
+@media only screen and (max-width: 480px) {
+    /* Estilos para celular */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    padding-inline: 5%;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="checkbox"] {
+    display: inline;
+    margin-top: 5px;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+}
+
+.form-group:hover .tooltip {
+    display: block;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 5px 5px 0;
+    border-color: rgba(0, 0, 0, 0.7) transparent transparent;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Media queries para hacer el formulario responsive */
+
+@media only screen and (max-width: 768px) {
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea,
+    .form-group select {
+        width: calc(100% - 16px); /* Restar el padding y borde */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea,
+    .form-group select {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .tooltip {
+        font-size: 10px;
+    }
+}
+/* Estilos generales para las tarjetas */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
+    width: calc(33.33% - 20px);
+    margin-right: 20px; 
+    float: left; 
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+    position: relative;
+}
+.card:hover {
+    transform: scale(1.05); 
+}
+.card:nth-child(3n) {
+    margin-right: 0; 
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.card-content p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el mensaje de detalles */
+.details-message {
+    display: none;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.details-message.active {
+    display: block;
+}
+
+.details-message p {
+    margin: 5px 0;
+}
+
+/* Media query para dispositivos con una anchura máxima de 768px (tabletas) */
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); 
+    }
+}
+
+/* Media query para dispositivos con una anchura máxima de 480px (móviles) */
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%; /* Establecer el ancho al 100% para ocupar toda la pantalla */
+    }
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    display: block;
+    min-width: 100%;
+    flex: 0 0 auto;
+}
+
+.carousel-item img {
+    width: 100vw;
+    height: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+nav ul li a.selected {
+    color: #ff0000; 
+    font-weight: bold;
+   
+}
+
+
+.grid-reseñas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 15px;
+  }
+  
+  .reseñas {
+    border: 2px solid #c2e9f6;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0 0 0 0.1);
+    font-family: 'Comic Neue', cursive;
+    transition: transform 0.3s ease;
+  }
+  
+  .cliente-nombre {
+    color: #4537c4;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .estrellas {
+    color: rgb(218, 205, 33);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center; 
+  }
+  
+  .comentario {
+    color: #444;
+    font-size: 2rem;
+    text-align: left;
+  }
+  .video {
+    max-width: 700px;
+    margin: 20px auto;
+    aspect-ratio: 16/9;
+  }
+  
+  .video iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
