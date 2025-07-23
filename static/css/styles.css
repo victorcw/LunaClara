@@ -11,11 +11,14 @@ body {
 }
 
 header {
+    position:sticky;
+    top: 0;
     display:flex;
     align-items: flex-end;
     justify-content: space-between;
     background-color:#d0e7ee;
     color: black;
+    box-shadow: #0d5c7d;
     padding: 20px;
 }
 
