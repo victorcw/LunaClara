@@ -175,27 +175,29 @@ footer {
 }
 
 .card img {
-    width: 100%;
+    width: 80%;
     height: auto;
     display: block;
-    
+    margin:auto;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .card-content {
-    padding: 20px;
+    padding: 30px;
 }
 
 .card-content h3 {
     margin-top: 0;
+    align-content: center;
     font-size: 1.2em;
-    color: #333;
+    color: #0e0e0e;
 }
 
 .card-content p {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     color: #666;
+    font-size: 1em;
 }
 
 .card-container {
@@ -207,11 +209,12 @@ footer {
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 3px 6px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 0.9rem;
     transition: background-color 0.3s;
     cursor: pointer;
 }
@@ -222,15 +225,17 @@ footer {
 
 /* Estilos para el mensaje de detalles */
 .details-message {
-    display: none;
+    /*display: none; */
     background-color: #f9f9f9;
     border-top: 1px solid #ddd;
-    padding: 10px;
+    padding: 5px;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     text-align: center;
+    color: #080404;
+    font-size: 0.7rem;
 }
 
 .details-message.active {
@@ -238,7 +243,7 @@ footer {
 }
 
 .details-message p {
-    margin: 5px 0;
+    margin: 1px 0;
 }
 
 /* Media query para dispositivos con una anchura máxima de 768px (tabletas) */
@@ -355,3 +360,115 @@ nav ul li a.selected {
     height: 100%;
     border: none;
   }
+
+  /* Contenedor principal del carrusel */
+  .grid-reseniasAPI {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 20%;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    min-height: 300px;
+  }
+     .tituloresenia
+     {
+        margin-top: 0px;
+        text-align: left;
+        }
+
+    /* Estilo de cada reseña */
+  .reseniaAPI {
+    opacity: 0; /* Oculta las reseñas por defecto */
+    transform: translateX(100%); /* Posiciona fuera de la vista */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
+    position: absolute; /* Permite superposición de reseñas */
+    width: 100%;
+    text-align: center;
+  }
+
+    /* Reseña activa */
+  .reseniaAPI.active {
+    opacity: 1; /* Muestra la reseña activa */
+    transform: translateX(0); /* Posiciona en el centro */
+  }
+
+  /* Responsividad */
+  @media (max-width: 768px) {   
+    .reseñas {
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    .estrellas {
+      font-size: 1.2rem;
+    }
+  }
+
+   /* Carrito */
+   
+#icono-carrito {
+    position: relative;
+    font-size: 1.3rem;
+    color: #0d5c7d;
+  }
+  
+  #contador-carrito {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+  
+  .carrito-menu {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    background-color: #fff;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    z-index: 200;
+  }
+  
+  .oculto {
+    display: none;
+  }
+
+
+  /* Estilo del modal para Resumen de compra*/
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
