@@ -19,7 +19,8 @@ header {
     background-color:#d0e7ee;
     color: black;
     box-shadow: #0d5c7d;
-    padding: 20px;
+    padding: 0.5rem 1rem;
+    z-index: 20;
 }
 
 #logo {
@@ -158,6 +159,7 @@ footer {
 }
 /* Estilos generales para las tarjetas */
 .card {
+    display:flex;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -168,7 +170,7 @@ footer {
     float: left; 
     transition: transform 0.3s ease;
     box-sizing: border-box;
-    position: relative;
+    /*position: relative; */
 }
 .card:hover {
     transform: scale(1.05); 
